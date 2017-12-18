@@ -40,7 +40,7 @@ export class GeneratedApiClient {
    * @description
    * Enumerates apps added to your organization with pagination. A subset of apps can be returned that match a supported filter expression or query.
    */
-  listApplications(queryParameters: any): Collection;
+  listApplications(queryParameters?: any): Collection;
   /**
    *
    * @param {Application} application
@@ -49,7 +49,7 @@ export class GeneratedApiClient {
    * @description
    * Adds a new application to your Okta organization.
    */
-  createApplication(application: Application, queryParameters: any): Resource | ModelResolutionFactory;
+  createApplication(application: Application, queryParameters?: any): Resource | ModelResolutionFactory;
 
   /**
    *
@@ -67,7 +67,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches an application from your Okta organization by `id`.
    */
-  getApplication(appId: string, queryParameters: any): Resource | ModelResolutionFactory;
+  getApplication(appId: string, queryParameters?: any): Resource | ModelResolutionFactory;
   /**
    *
    * @param appId {String}
@@ -93,7 +93,7 @@ export class GeneratedApiClient {
    * @description
    * Generates a new X.509 certificate for an application key credential
    */
-  generateApplicationKey(appId: string, queryParameters: any): JsonWebKey
+  generateApplicationKey(appId: string, queryParameters?: any): JsonWebKey
   /**
    *
    * @param appId {String}
@@ -112,7 +112,7 @@ export class GeneratedApiClient {
    * @description
    * Clones a X.509 certificate for an application key credential from a source application to target application.
    */
-  cloneApplicationKey(appId: string, keyId: string, queryParameters: any): JsonWebKey;
+  cloneApplicationKey(appId: string, keyId: string, queryParameters?: any): JsonWebKey;
 
   /**
    *
@@ -125,7 +125,7 @@ export class GeneratedApiClient {
    * @description
    * Enumerates group assignments for an application.
    */
-  listApplicationGroupAssignments(appId: string, queryParameters: any): Collection;
+  listApplicationGroupAssignments(appId: string, queryParameters?: any): Collection;
 
   /**
    *
@@ -145,7 +145,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches an application group assignment
    */
-  getApplicationGroupAssignment(appId: string, groupId: string, queryParameters: any): models.ApplicationGroupAssignment;
+  getApplicationGroupAssignment(appId: string, groupId: string, queryParameters?: any): models.ApplicationGroupAssignment;
 
   /**
    *
@@ -186,7 +186,7 @@ export class GeneratedApiClient {
    * @description
    * Enumerates all assigned [application users](#application-user-model) for an application.
    */
-  listApplicationUsers(appId: string, queryParameters: any): Collection
+  listApplicationUsers(appId: string, queryParameters?: any): Collection
   /**
    *
    * @param appId {String}
@@ -214,7 +214,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches a specific user assignment for application by `id`.
    */
-  getApplicationUser(appId: string, userId: string, queryParameters: any): Promise<models.AppUser>;
+  getApplicationUser(appId: string, userId: string, queryParameters?: any): Promise<models.AppUser>;
   /**
    *
    * @param appId {String}
@@ -236,7 +236,7 @@ export class GeneratedApiClient {
    * @description
    * Enumerates groups in your organization with pagination. A subset of groups can be returned that match a supported filter expression or query.
    */
-  listGroups(queryParameters: any): Collection;
+  listGroups(queryParameters?: any): Collection;
 
   /**
    *
@@ -254,7 +254,7 @@ export class GeneratedApiClient {
    * @description
    * Lists all group rules for your organization.
    */
-  listRules(queryParameters: any): Collection;
+  listRules(queryParameters?: any): Collection;
 
   /**
    *
@@ -272,7 +272,7 @@ export class GeneratedApiClient {
    * @description
    * Removes a specific group rule by id from your organization
    */
-  deleteRule(ruleId: string, queryParameters: any): Request;
+  deleteRule(ruleId: string, queryParameters?: any): Request;
 
   /**
    *
@@ -323,7 +323,7 @@ export class GeneratedApiClient {
    * @description
    * Lists all group rules for your organization.
    */
-  getGroup(groupId: string, queryParameters: any): Promise<models.Group>;
+  getGroup(groupId: string, queryParameters?: any): Promise<models.Group>;
 
   /**
    *
@@ -343,7 +343,7 @@ export class GeneratedApiClient {
    * @description
    * Enumerates all [users](/docs/api/resources/users.html#user-model) that are a member of a group.
    */
-  listGroupUsers(groupId: string, queryParameters: any): Collection;
+  listGroupUsers(groupId: string, queryParameters?: any): Collection;
 
   /**
    *
@@ -408,7 +408,7 @@ export class GeneratedApiClient {
    * @description
    * Lists users in your organization with pagination in most cases.  A subset of users can be returned that match a supported filter expression or search criteria.
    */
-  listUsers(queryParameters: any): Collection;
+  listUsers(queryParameters?: any): Collection;
 
   /**
    *
@@ -419,7 +419,7 @@ export class GeneratedApiClient {
    * @description
    * Creates a new user in your Okta organization with or without credentials.
    */
-  createUser(user: models.User, queryParameters: any): Promise<models.User>;
+  createUser(user: models.User, queryParameters?: any): Promise<models.User>;
 
   /**
    *
@@ -454,7 +454,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches appLinks for all direct or indirect (via group membership) assigned applications.
    */
-  listAppLinks(userId: string, queryParameters: any): Collection;
+  listAppLinks(userId: string, queryParameters?: any): Collection;
 
   /**
    *
@@ -483,7 +483,7 @@ export class GeneratedApiClient {
    * @description
    * Generates a one-time token (OTT) that can be used to reset a user's password.  The user will be required to validate their security question's answer when visiting the reset link.  This operation can only be performed on users with a valid [recovery question credential](#recovery-question-object) and have an `ACTIVE` status.
    */
-  forgotPassword(userId: string, userCredentials: models.UserCredentials, queryParameters: any): Promise<models.ForgotPasswordResponse>;
+  forgotPassword(userId: string, userCredentials: models.UserCredentials, queryParameters?: any): Promise<models.ForgotPasswordResponse>;
 
   /**
    *
@@ -503,7 +503,7 @@ export class GeneratedApiClient {
    * @description
    * Enrolls a user with a supported [factor](#list-factors-to-enroll)
    */
-  addFactor(userId: string, factor: models.Factor, queryParameters: any): Promise<models.Factor>;
+  addFactor(userId: string, factor: models.Factor, queryParameters?: any): Promise<models.Factor>;
 
   /**
    *
@@ -558,7 +558,7 @@ export class GeneratedApiClient {
    * @description
    * Verifies an OTP for a `token` or `token:hardware` factor
    */
-  verifyFactor(userId: string, factorId: string, verifyFactorRequest: models.VerifyFactorRequest, queryParameters: any): Promise<models.VerifyFactorResponse>
+  verifyFactor(userId: string, factorId: string, verifyFactorRequest: models.VerifyFactorRequest, queryParameters?: any): Promise<models.VerifyFactorResponse>
 
   /**
    *
@@ -569,7 +569,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches the groups of which the user is a member.
    */
-  listUserGroups(userId: string, queryParameters: any): Collection;
+  listUserGroups(userId: string, queryParameters?: any): Collection;
 
   /**
    *
@@ -579,7 +579,7 @@ export class GeneratedApiClient {
    * @description
    * Activates a user.  This operation can only be performed on users with a `STAGED` status.  Activation of a user is an asynchronous operation.  The user will have the `transitioningToStatus` property with a value of `ACTIVE` during activation to indicate that the user hasn't completed the asynchronous operation.  The user will have a status of `ACTIVE` when the activation process is complete.
    */
-  activateUser(userId: string, queryParameters: any): Promise<models.UserActivationToken>;
+  activateUser(userId: string, queryParameters?: any): Promise<models.UserActivationToken>;
 
   /**
    *
@@ -596,7 +596,7 @@ export class GeneratedApiClient {
    * @description
    * This operation transitions the user to the status of `PASSWORD_EXPIRED` so that the user is required to change their password at their next login.
    */
-  expirePassword(userId: string, queryParameters: any): Promise<models.TempPassword>;
+  expirePassword(userId: string, queryParameters?: any): Promise<models.TempPassword>;
 
   /**
    *
@@ -615,7 +615,7 @@ export class GeneratedApiClient {
    * @description
    * Generates a one-time token (OTT) that can be used to reset a user's password.  The OTT link can be automatically emailed to the user or returned to the API caller and distributed using a custom flow.
    */
-  resetPassword(userId: string, queryParameters: any): Promise<models.ResetPasswordToken>;
+  resetPassword(userId: string, queryParameters?: any): Promise<models.ResetPasswordToken>;
 
   /**
    *
@@ -649,7 +649,7 @@ export class GeneratedApiClient {
    * @description
    * Lists all roles assigned to a user.
    */
-  listAssignedRoles(userId: string, queryParameters: any): Collection;
+  listAssignedRoles(userId: string, queryParameters?: any): Collection;
 
   /**
    *
@@ -679,7 +679,7 @@ export class GeneratedApiClient {
    * @description
    * Convenience method for /api/v1/users/{userId}/roles/{roleId}/targets/groups
    */
-  listGroupTargetsForRole(userId: string, roleId: string, queryParameters: any): Collection;
+  listGroupTargetsForRole(userId: string, roleId: string, queryParameters?: any): Collection;
 
   /**
    *
@@ -709,6 +709,6 @@ export class GeneratedApiClient {
    * @description
    * Removes all active identity provider sessions. This forces the user to authenticate on the next operation. Optionally revokes OpenID Connect and OAuth refresh and access tokens issued to the user.
    */
-  endAllUserSessions(userId: string, queryParameters: any): Request;
+  endAllUserSessions(userId: string, queryParameters?: any): Request;
 
 }
