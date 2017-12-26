@@ -49,7 +49,7 @@ export class GeneratedApiClient {
    * @description
    * Adds a new application to your Okta organization.
    */
-  createApplication(application: Application, queryParameters?: any): Resource | ModelResolutionFactory;
+  createApplication(application: Application, queryParameters?: any): Promise<Resource | ModelResolutionFactory>;
 
   /**
    *
@@ -67,7 +67,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches an application from your Okta organization by `id`.
    */
-  getApplication(appId: string, queryParameters?: any): Resource | ModelResolutionFactory;
+  getApplication(appId: string, queryParameters?: any): Promise<Resource | ModelResolutionFactory>;
   /**
    *
    * @param appId {String}
@@ -75,7 +75,7 @@ export class GeneratedApiClient {
    * @description
    * Updates an application in your organization.
    */
-  updateApplication(appId: string, application: Application): Resource | ModelResolutionFactory;
+  updateApplication(appId: string, application: Application): Promise<Resource | ModelResolutionFactory>;
 
   /**
    *
@@ -93,7 +93,7 @@ export class GeneratedApiClient {
    * @description
    * Generates a new X.509 certificate for an application key credential
    */
-  generateApplicationKey(appId: string, queryParameters?: any): JsonWebKey
+  generateApplicationKey(appId: string, queryParameters?: any): Promise<JsonWebKey>;
   /**
    *
    * @param appId {String}
@@ -101,7 +101,7 @@ export class GeneratedApiClient {
    * @description
    * Gets a specific [application key credential](#application-key-credential-model) by `kid`
    */
-  getApplicationKey(appId: string, keyId: string): JsonWebKey
+  getApplicationKey(appId: string, keyId: string): Promise<JsonWebKey>;
 
   /**
    *
@@ -112,7 +112,7 @@ export class GeneratedApiClient {
    * @description
    * Clones a X.509 certificate for an application key credential from a source application to target application.
    */
-  cloneApplicationKey(appId: string, keyId: string, queryParameters?: any): JsonWebKey;
+  cloneApplicationKey(appId: string, keyId: string, queryParameters?: any): Promise<JsonWebKey>;
 
   /**
    *
@@ -145,7 +145,7 @@ export class GeneratedApiClient {
    * @description
    * Fetches an application group assignment
    */
-  getApplicationGroupAssignment(appId: string, groupId: string, queryParameters?: any): models.ApplicationGroupAssignment;
+  getApplicationGroupAssignment(appId: string, groupId: string, queryParameters?: any): Promise<models.ApplicationGroupAssignment>;
 
   /**
    *
@@ -155,7 +155,7 @@ export class GeneratedApiClient {
    * @description
    * Assigns a group to an application
    */
-  createApplicationGroupAssignment(appId: string, groupId: string, applicationGroupAssignment: models.ApplicationGroupAssignment): models.ApplicationGroupAssignment;
+  createApplicationGroupAssignment(appId: string, groupId: string, applicationGroupAssignment: models.ApplicationGroupAssignment): Promise<models.ApplicationGroupAssignment>;
 
   /**
    *
@@ -194,7 +194,7 @@ export class GeneratedApiClient {
    * @description
    * Assigns an user to an application with [credentials](#application-user-credentials-object) and an app-specific [profile](#application-user-profile-object). Profile mappings defined for the application are first applied before applying any profile properties specified in the request.
    */
-  assignUserToApplication(appId: string, appUser: models.AppUser): models.AppUser;
+  assignUserToApplication(appId: string, appUser: models.AppUser): Promise<models.AppUser>;
 
   /**
    *
